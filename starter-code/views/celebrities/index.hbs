@@ -1,4 +1,7 @@
 <h2>Celebirities</h2>
+<button><a href="/celebrities/new">Add New Celeb</a></button>
+<div class = "celeb-list">
 {{#each celeb }}
 <a href = "/celebrities/{{this._id}}">{{>celebname}}</a>
 {{/each}}
+</div>

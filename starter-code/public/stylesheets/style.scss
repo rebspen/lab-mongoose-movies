@@ -5,3 +5,14 @@ body {
 a {
   color: #00b7ff;
 }
+
+.celeb-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+  text-align: center;
+}

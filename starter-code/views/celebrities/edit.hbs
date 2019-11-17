@@ -1,11 +1,12 @@
 <h2>Edit</h2>
-
-<form action="/create" method="POST">
-  <input type="text" placeholder="Name" name="name"/><br>
-  <input type="text" placeholder="Occupation" name="occupation"/><br>
-  <input type="text" placeholder="Catchphrase" name = "catchPhrase"/><br>
-  <button>Submit</button>
+<button><a href="/celebrities">Celebrities</a></button>
+{{#with celeb }}
+<form action="/celebrities/{{this._id}}/edit" method="POST">
+ <textarea type="text" placeholder="{{this.name}}" name="name">{{ this.name }}</textarea>
+  <textarea type="text" placeholder="{{this.occupation}}" name="occupation"> {{this.occupation}} </textarea>
+  <textarea type="text" placeholder="{{this.catchPhrase}}" name = "catchPhrase">{{this.catchPhrase}}</textarea>
+  <button>Edit</button>
 </form>
-
+{{/with}}
 
 
